@@ -1,6 +1,11 @@
 # docker-unionfs
 Combine 2 host directories into a unionfs mount managed by a docker container.
 
+## Volumes:
+* `top` - First directory
+* `bottom` - Second directory
+* `merged` - Mountpoint for where both directories will be combined at
+
 ## Environment Vars:
 * `TZ` - The timezone the container will use (default: Etc/UTC)
 * `PUID` - The merged mount's user ID (default: 1000)
