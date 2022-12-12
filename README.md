@@ -12,7 +12,7 @@ Combine 2 host directories into a unionfs mount managed by a docker container.
 <details>
     <summary>docker</summary>
     
-    `docker run -dit --name "ethorbit-and-bob-photos" --privileged --network=none --restart on-failure --env TZ="America/Los_Angeles" --env PUID=1000 --env PGID=1008 -v "/home/ethorbit/Pictures:/top:shared" -v "/home/bob/Pictures:/bottom:shared" -v "/mnt/photos-merged:/merged:shared" ethorbit/unionfs:latest`
+    docker run -dit --name "ethorbit-and-bob-photos" --privileged --network=none --restart on-failure --env TZ="America/Los_Angeles" --env PUID=1000 --env PGID=1008 -v "/home/ethorbit/Pictures:/top:shared" -v "/home/bob/Pictures:/bottom:shared" -v "/mnt/photos-merged:/merged:shared" ethorbit/unionfs:latest
 </details>
 <details>
     <summary>docker-compose</summary>
